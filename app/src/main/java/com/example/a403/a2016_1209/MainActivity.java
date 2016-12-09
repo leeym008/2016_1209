@@ -111,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
                                     Num3[0] = Double.parseDouble(TV1.getText().toString());
                                     Sum1[0] = Num1[0] + Num2[0] + Num3[0];
                                     Sum3[0] = Num1[0]*15000 + Num2[0]*12000 + Num3[0]*8000;
-                                    Sum2[0] = Sum3[0] *0.95;
+                                    Sum2[0] = Sum3[0] *0.05;
                                     TV1.setText((int) Sum1[0]);
                                     TV2.setText((int) Sum2[0]);
                                     TV3.setText((int) Sum3[0]);
@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
                                     Num3[0] = Double.parseDouble(TV1.getText().toString());
                                     Sum1[0] = Num1[0] + Num2[0] + Num3[0];
                                     Sum3[0] = Num1[0]*15000 + Num2[0]*12000 + Num3[0]*8000;
-                                    Sum2[0] = Sum3[0] *0.90;
+                                    Sum2[0] = Sum3[0] *0.10;
                                     TV1.setText((int) Sum1[0]);
                                     TV2.setText((int) Sum2[0]);
                                     TV3.setText((int) Sum3[0]);
@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
                                     Num3[0] = Double.parseDouble(TV1.getText().toString());
                                     Sum1[0] = Num1[0] + Num2[0] + Num3[0];
                                     Sum3[0] = Num1[0]*15000 + Num2[0]*12000 + Num3[0]*8000;
-                                    Sum2[0] = Sum3[0] *0.80;
+                                    Sum2[0] = Sum3[0] *0.20;
                                     TV1.setText((int) Sum1[0]);
                                     TV2.setText((int) Sum2[0]);
                                     TV3.setText((int) Sum3[0]);
