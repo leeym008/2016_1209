@@ -13,8 +13,11 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Switch;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +28,8 @@ public class MainActivity extends AppCompatActivity {
     Chronometer CM;
     LinearLayout Layout1, Layout2, Layout3, Layout4, Layout5, Layout6;
     Switch Switch1;
+    RadioGroup RG;
+    RadioButton R1, R2, R3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +52,10 @@ public class MainActivity extends AppCompatActivity {
         Layout5 = (LinearLayout)findViewById(R.id.Layout5);
         Layout6 = (LinearLayout)findViewById(R.id.Layout6);
         Switch1 = (Switch)findViewById(R.id.switch1);
+        RG = (RadioGroup)findViewById(R.id.RD);
+        R1 = (RadioButton)findViewById(R.id.radioButton1);
+        R2 = (RadioButton)findViewById(R.id.radioButton2);
+        R3 = (RadioButton)findViewById(R.id.radioButton3);
 
         CM.stop();
         Layout2.setVisibility(View.INVISIBLE);
@@ -54,6 +63,13 @@ public class MainActivity extends AppCompatActivity {
         Layout4.setVisibility(View.INVISIBLE);
         Layout5.setVisibility(View.INVISIBLE);
         Layout6.setVisibility(View.INVISIBLE);
+
+        final double[] Num1 = new double[1];
+        final double[] Num2 = new double[1];
+        final double[] Num3 = new double[1];
+        final double[] Sum1 = new double[1];
+        final double[] Sum2 = new double[1];
+        final double[] Sum3 = new double[1];
 
         Switch1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -80,12 +96,72 @@ public class MainActivity extends AppCompatActivity {
                     ET3.setText(null);
                 }
 
+                BTN1.setOnClickListener(new Button.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        if(TV1==null || TV2==null || TV3==null){
+                            Toast.makeText(getApplicationContext(), "인원수를 입력하세요",Toast.LENGTH_LONG).show();
+                        }
+                    else {
+                            R1.setOnClickListener(new View.OnClickListener(){
+                                @Override
+                                public void onClick(View v) {
+                                    Num1[0] = Double.parseDouble(TV1.getText().toString());
+                                    Num2[0] = Double.parseDouble(TV1.getText().toString());
+                                    Num3[0] = Double.parseDouble(TV1.getText().toString());
+                                    Sum1[0] = Num1[0] + Num2[0] + Num3[0];
+                                    Sum3[0] = Num1[0]*15000 + Num2[0]*12000 + Num3[0]*8000;
+                                    Sum2[0] = Sum3[0] *0.95;
+                                    TV1.setText((int) Sum1[0]);
+                                    TV2.setText((int) Sum2[0]);
+                                    TV3.setText((int) Sum3[0]);
+                                }
+                            });
+                            R2.setOnClickListener(new View.OnClickListener(){
+                                @Override
+                                public void onClick(View v) {
+                                    Num1[0] = Double.parseDouble(TV1.getText().toString());
+                                    Num2[0] = Double.parseDouble(TV1.getText().toString());
+                                    Num3[0] = Double.parseDouble(TV1.getText().toString());
+                                    Sum1[0] = Num1[0] + Num2[0] + Num3[0];
+                                    Sum3[0] = Num1[0]*15000 + Num2[0]*12000 + Num3[0]*8000;
+                                    Sum2[0] = Sum3[0] *0.90;
+                                    TV1.setText((int) Sum1[0]);
+                                    TV2.setText((int) Sum2[0]);
+                                    TV3.setText((int) Sum3[0]);
+                                }
+                            });
+                            R3.setOnClickListener(new View.OnClickListener(){
+                                @Override
+                                public void onClick(View v) {
+                                    Num1[0] = Double.parseDouble(TV1.getText().toString());
+                                    Num2[0] = Double.parseDouble(TV1.getText().toString());
+                                    Num3[0] = Double.parseDouble(TV1.getText().toString());
+                                    Sum1[0] = Num1[0] + Num2[0] + Num3[0];
+                                    Sum3[0] = Num1[0]*15000 + Num2[0]*12000 + Num3[0]*8000;
+                                    Sum2[0] = Sum3[0] *0.80;
+                                    TV1.setText((int) Sum1[0]);
+                                    TV2.setText((int) Sum2[0]);
+                                    TV3.setText((int) Sum3[0]);
+                                }
+                            });
+                        }
+
+
+
+
+
+
+
+
+
+
+
+
+                    }
+                } );
+
             }
-
-
-
-
-
         });
 
 

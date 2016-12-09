@@ -46,7 +46,8 @@
 
         <RadioGroup
             android:layout_width="193dp"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content"
+            android:id="@+id/RD">
 
             <TextView
                 android:text="어른(15000원)"
