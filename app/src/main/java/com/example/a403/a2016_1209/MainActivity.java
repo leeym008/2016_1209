@@ -3,6 +3,7 @@ package com.example.a403.a2016_1209;
 import android.graphics.Color;
 import android.media.Image;
 import android.os.SystemClock;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Layout;
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         R1 = (RadioButton)findViewById(R.id.radioButton1);
         R2 = (RadioButton)findViewById(R.id.radioButton2);
         R3 = (RadioButton)findViewById(R.id.radioButton3);
+        final ImageView img = (ImageView)findViewById(R.id.imageView);
 
         CM.stop();
         Layout2.setVisibility(View.INVISIBLE);
@@ -115,6 +117,7 @@ public class MainActivity extends AppCompatActivity {
                                     TV1.setText((int) Sum1[0]);
                                     TV2.setText((int) Sum2[0]);
                                     TV3.setText((int) Sum3[0]);
+                                    img.setImageResource(R.drawable.a);
                                 }
                             });
                             R2.setOnClickListener(new View.OnClickListener(){
@@ -129,6 +132,7 @@ public class MainActivity extends AppCompatActivity {
                                     TV1.setText((int) Sum1[0]);
                                     TV2.setText((int) Sum2[0]);
                                     TV3.setText((int) Sum3[0]);
+                                    img.setImageResource(R.drawable.b);
                                 }
                             });
                             R3.setOnClickListener(new View.OnClickListener(){
@@ -143,6 +147,7 @@ public class MainActivity extends AppCompatActivity {
                                     TV1.setText((int) Sum1[0]);
                                     TV2.setText((int) Sum2[0]);
                                     TV3.setText((int) Sum3[0]);
+                                    img.setImageResource(R.drawable.c);
                                 }
                             });
                         }
