@@ -1,6 +1,8 @@
 package com.example.a403.a2016_1209;
 
+import android.graphics.Color;
 import android.media.Image;
+import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Layout;
@@ -62,6 +64,8 @@ public class MainActivity extends AppCompatActivity {
                     Layout4.setVisibility(View.VISIBLE);
                     Layout5.setVisibility(View.VISIBLE);
                     Layout6.setVisibility(View.VISIBLE);
+                    CM.start();
+                    CM.setTextColor(Color.parseColor("#FF0000"));
                 }
 
                 else {
@@ -70,6 +74,10 @@ public class MainActivity extends AppCompatActivity {
                     Layout4.setVisibility(View.INVISIBLE);
                     Layout5.setVisibility(View.INVISIBLE);
                     Layout6.setVisibility(View.INVISIBLE);
+                    CM.setBase(SystemClock.elapsedRealtime());
+                    ET1.setText(null);
+                    ET2.setText(null);
+                    ET3.setText(null);
                 }
 
             }
